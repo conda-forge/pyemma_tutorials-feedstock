@@ -1,6 +1,6 @@
 {% set name = "pyemma_tutorials" %}
-{% set version = "0.1" %}
-{% set sha256 = "d0afe88a53fb5148640f0cb93cc7ed25f8e2d510936760e45506bb58772d8202" %}
+{% set version = "0.2" %}
+{% set sha256 = "3aeaa46b95028c03daaa16da5256334767dbd3797d9c7b08a507e55635c10302" %}
 
 package:
   name: {{ name }} 
@@ -24,7 +24,7 @@ requirements:
   build:
     - pip
   run:
-    - pyemma >=2.5.3
+    - pyemma >=2.5.4
     - mdshare
     - notebook
     - nglview >=1.1.3
