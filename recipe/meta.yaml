@@ -12,9 +12,9 @@ source:
 
 build:
   script: python -m pip install --no-deps --ignore-installed . -v
-  number: 0
+  number: 1
   entry_points:
-    - pyemma_tutorials = pyemma_tutorials:main
+    - pyemma_tutorials = pyemma_tutorials.cli:main
 
   osx_is_app: True
   noarch: python
