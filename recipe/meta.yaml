@@ -1,6 +1,6 @@
 {% set name = "pyemma_tutorials" %}
-{% set version = "0.3" %}
-{% set sha256 = "b08c41e21fcaf78c9ebfc89a68c1c552aef0add992981ba70b8f4fa42e34f968" %}
+{% set version = "1.0b" %}
+{% set sha256 = "25a6c109dceb35007b6e556b344e7d2285f1dec2df1a82060acfa7ebfa03e120" %}
 
 package:
   name: {{ name }} 
@@ -12,7 +12,7 @@ source:
 
 build:
   script: python -m pip install --no-deps --ignore-installed . -v
-  number: 1
+  number: 0
   entry_points:
     - pyemma_tutorials = pyemma_tutorials.cli:main
 
