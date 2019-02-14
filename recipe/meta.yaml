@@ -1,13 +1,13 @@
 {% set name = "pyemma_tutorials" %}
-{% set version = "1.0b" %}
-{% set sha256 = "25a6c109dceb35007b6e556b344e7d2285f1dec2df1a82060acfa7ebfa03e120" %}
+{% set version = "1.0" %}
+{% set sha256 = "9ce0b5e16a8f732fbf295e691029068395cd401eebd8dead3e6615c3c1945b2d" %}
 
 package:
   name: {{ name }} 
   version: {{ version }} 
 
 source:
-  url: https://github.com/markovmodel/{{name}}/archive/v{{ version }}.tar.gz
+  url: https://github.com/markovmodel/{{name}}/archive/final-published-version-V1.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -24,8 +24,8 @@ requirements:
   build:
     - pip
   run:
-    - pyemma >=2.5.4
-    - mdshare
+    - pyemma >=2.5.5
+    - mdshare >=0.4.0
     - notebook
     - nglview >=1.1.3
     - jupyter_contrib_nbextensions
