@@ -1,18 +1,18 @@
 {% set name = "pyemma_tutorials" %}
 {% set version = "1.0" %}
-{% set sha256 = "9ce0b5e16a8f732fbf295e691029068395cd401eebd8dead3e6615c3c1945b2d" %}
+{% set sha256 = "038d86b9e82791e13554f8668bf70db3b75f3ece9c901e264b862435833d44fc" %}
 
 package:
   name: {{ name }} 
   version: {{ version }} 
 
 source:
-  url: https://github.com/markovmodel/{{name}}/archive/final-published-version-V1.tar.gz
+  url: https://github.com/markovmodel/pyemma_tutorials/archive/refs/tags/final-published-version-V1.tar.gz
   sha256: {{ sha256 }}
 
 build:
   script: python -m pip install --no-deps --ignore-installed . -v
-  number: 0
+  number: 1
   entry_points:
     - pyemma_tutorials = pyemma_tutorials.cli:main
 
@@ -21,6 +21,8 @@ build:
 
 
 requirements:
+  host:
+    - setuptools
   build:
     - pip
   run:
@@ -32,6 +34,8 @@ requirements:
     - nbexamples
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyemma_tutorials
   commands:
